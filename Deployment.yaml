@@ -17,3 +17,4 @@ spec:
           image: docker.io/vishnusk/kube-demo:v1
           ports:
           - containerPort: 80
+            hostPort: 8081
