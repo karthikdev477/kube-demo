@@ -13,7 +13,7 @@ spec:
       spec:
         containers:
         - name: kube-app
-          image: docker.io/vishnusk/kube-demo:v1
+          image: docker.io/vishnusk/kube-demo:
           ports:
           - containerPort: 80
             hostPort: 8081
