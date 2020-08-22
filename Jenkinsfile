@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('kubectl test') {
             steps {
-                //get kubectl version
+                //get kubectl client version
                 sh 'kubectl version --client'
             }
         }
