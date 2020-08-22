@@ -4,16 +4,16 @@ metadata:
     name: web-app
 spec:
     selector:
-        matchLabels:
+      matchLabels:
+        app: web
+    replicas: 2 
+    template:
+      metadata:
+        labels:
           app: web
-      replicas: 2 
-      template:
-        metadata:
-          labels:
-            app: web
-        spec:
-          containers:
-          - name: kube-demo
-            image: docker.io/vishnusk/kube-demo:latest
-            ports:
-            - containerPort: 80
+      spec:
+        containers:
+        - name: kube-demo
+          image: docker.io/vishnusk/kube-demo:v1
+          ports:
+          - containerPort: 80
