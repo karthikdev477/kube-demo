@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+    name: web-app
+spec:
+    selector: 
+        matchLabels:
+            app: web-app
+    containers:
+    -  name: demo-kube
+       image: docker.io/demo-kube:latest
+ 
