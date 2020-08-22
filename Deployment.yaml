@@ -1,12 +1,13 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Pod
 metadata: 
     name: web-app
+    labels:
+        app: web-app
 spec:
-    selector: 
-        matchLabels:
-            app: web-app
     containers:
     -  name: demo-kube
        image: docker.io/demo-kube:latest
+       ports:
+          containerPort: 80
  
