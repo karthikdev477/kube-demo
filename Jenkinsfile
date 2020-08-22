@@ -1,10 +1,9 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'PROJECT-ID'
-        CLUSTER_NAME = 'CLUSTER-NAME'
-        LOCATION = 'CLUSTER-LOCATION'
-        CREDENTIALS_ID = 'gke'
+        PROJECT_ID = 'summer-sun-286703'
+        CLUSTER_NAME = 'kube-demo'
+        LOCATION = 'asia-southeast1-a'
     }
     stages {
         stage("Build image") {
