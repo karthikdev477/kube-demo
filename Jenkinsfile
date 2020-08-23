@@ -31,6 +31,7 @@ pipeline {
         }
         stage("Get frontend service") {
             steps {
+                sleep(50) 
                 sh 'kubectl get svc'
                 sh 'kubectl get pods'
             }
