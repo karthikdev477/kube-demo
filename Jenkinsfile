@@ -33,6 +33,7 @@ pipeline {
         stage("Get frontend service") {
             steps {
                 sh 'kubectl get svc'
+                sh 'kubectl get pods'
             }
         }
     }    
