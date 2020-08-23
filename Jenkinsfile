@@ -25,7 +25,6 @@ pipeline {
         }        
         stage('Deploy to GKE') {
             steps{
-                sh "sed -i 's/kube-demo:*/kube-demo:${env.BUILD_ID}/g' Deployment.yaml"
                 sh 'kubectl apply -f Deployment.yaml'
                 sh 'kubectl apply -f Service.yaml'
             }
