@@ -9,7 +9,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("vishnusk/kube-demo:${env.BUILD_ID}")
+                    myapp = docker.build("vishnusk/kube-demo:v${env.BUILD_ID}")
                 }
             }
         }
@@ -18,7 +18,7 @@ pipeline {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerid') {
                             myapp.push("latest")
-                            myapp.push("${env.BUILD_ID}")
+                            myapp.push("v${env.BUILD_ID}")
                     }
                 }
             }
