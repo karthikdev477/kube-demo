@@ -31,9 +31,16 @@ pipeline {
         }
         stage("Get frontend service") {
             steps {
-                sleep(50) 
+                sleep(30) 
                 sh 'kubectl get svc'
                 sh 'kubectl get pods'
+            }
+        }
+        stage("clean up") {
+            steps {
+                sleep(30) 
+                sh 'kubectl delete deployment web-app'
+                sh 'kubectl delete svc web-service'
             }
         }
     }    
