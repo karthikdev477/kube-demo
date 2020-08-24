@@ -43,5 +43,10 @@ pipeline {
                 sh 'kubectl delete svc web-service'
             }
         }
+        stage("mail") {
+            steps {
+                mail bcc: '', body: '${BUILD_LOG}', cc: '', from: '', replyTo: '', subject: 'jenkins build log', to: 'vishnusomank05@gmail.com'
+            }
+        }
     }    
 }
