@@ -6,4 +6,11 @@
         <h1>Welcome to my simple webpage!</h1>
         <h2>It is nice to meet you</h2>
     </head>
+    <body>
+        <?php
+            $myfile = fopen("/opt/myfile", "r") or die("Unable to open file!");
+            echo fread($myfile,filesize("/opt/myfile"));
+            fclose($myfile);
+        ?>
+    </body>
 </html>
