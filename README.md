@@ -1,2 +1,2 @@
 # kube-demo
-this file deploys
+this file deploys a pod to GKE
